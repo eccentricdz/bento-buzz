@@ -1,5 +1,5 @@
 article {
-    background-color: var(--card-hover-color);
+    background-color: var(--card-color);
     display: flex;
     flex-direction: column;
     padding: 16px;
@@ -22,7 +22,7 @@ article {
 }
 
 article:hover {
-    background-color: var(--card-color);
+    background-color: var(--card-hover-color);
 }
 
 article:active {
