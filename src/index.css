@@ -1,10 +1,29 @@
+:root {
+  --floor-color: #262623;
+  --card-color: #32322F;
+  --card-hover-color: #2D2D2A;
+  --bento-buzz-red-color: #EB5243;
+  --olive-cream-color: #A0907B;
+  --dirty-cream-color: #EAD8C9;
+  --subtle-gold-color: #EBC48B;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'PPEditorial';
+  src: url('./fonts/PPEditorialNew-Regular.otf') format('otf');
 }
 
 code {

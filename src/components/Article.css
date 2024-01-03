@@ -1,0 +1,46 @@
+article {
+    background-color: var(--card-color);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    color: var(--olive-cream-color);
+    flex: 1 1;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 8px;
+
+    h1 {
+        color: var(--dirty-cream-color);
+        font-weight: normal;
+        font-family: 'PPEditorial';
+        font-size: 1.5em;
+    }
+}
+
+.source {
+    transition: color 0.2s ease-in-out;
+    color: var(--subtle-gold-color);
+}
+
+article:hover {
+    background-color: var(--card-hover-color);
+}
+
+article:active {
+    .source::after {
+        content: '↗';
+        margin-left: 8px;
+        color: var(--olive-cream-color);
+    }
+}
+
+.metadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 0.875em;
+}
