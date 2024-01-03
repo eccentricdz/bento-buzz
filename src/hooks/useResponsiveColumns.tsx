@@ -3,7 +3,7 @@ import React, { useCallback, useEffect } from "react";
 const widthColumnBreakpoints = [768, 1024, 1280];
 
 const getColumns = (width: number): number =>
-  widthColumnBreakpoints.findIndex((breakpoint) => width < breakpoint) + 1;
+  widthColumnBreakpoints.findIndex((breakpoint) => width < breakpoint) + 1 || 3;
 
 /**
  * Calculates the number of columns based on the current window width.
