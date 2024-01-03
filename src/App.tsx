@@ -3,8 +3,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Link } from "./components/Link";
 import { Articles } from "./components/Articles";
+import { useResponsiveColumns } from "./hooks/useResponsiveColumns";
 
 function App() {
+  const columns = useResponsiveColumns();
+
   return (
     <div className="bento-buzz">
       <header>
@@ -12,16 +15,24 @@ function App() {
           <img src={logo} alt="logo" className="logo" />
         </Link>
         <nav className="header-links">
-          <Link href="https://www.bentobuzz.com.au/">{"Github"}</Link>
-          <Link href="https://www.bentobuzz.com.au/collections/bento-boxes">
-            {"About"}
+          <Link
+            href="https://github.com/eccentricdz/bento-buzz"
+            target="_blank"
+          >
+            {"Github"}
           </Link>
+          {/* <Link
+            onClick={() => setShowAbout((show) => !show)}
+            style={{ cursor: "pointer" }}
+          >
+            {showAbout ? "Articles" : "About"}
+          </Link> */}
         </nav>
       </header>
       <main>
-        <Articles id={0} />
-        <Articles id={1} />
-        <Articles id={2} />
+        {Array.from(Array(columns).keys()).map((col) => (
+          <Articles col={col} colCount={columns} />
+        ))}
       </main>
       <footer></footer>
     </div>

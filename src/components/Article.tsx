@@ -1,6 +1,7 @@
 import { FC } from "react";
 import "./Article.css";
 import { Link } from "./Link";
+import { decode } from "he";
 import React from "react";
 
 export type BentoBuzzArticle = {
@@ -17,31 +18,25 @@ export const Article: FC<BentoBuzzArticle> = ({
   content,
   link,
   pubDate,
-  score,
   source,
 }) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-
   return (
-    <Link
-      href={link}
-      target="_blank"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <Link href={link} target="_blank">
       <article>
-        <section className="metadata">
-          <p className="source">{source}</p>
-          <p className="date">
-            {new Date(pubDate).toLocaleDateString("en-gb", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </p>
-        </section>
-        <h1>{title}</h1>
-        <p className="description">{content}</p>
+        {source && pubDate && (
+          <section className="metadata">
+            <p className="source">{source}</p>
+            <p className="date">
+              {new Date(pubDate).toLocaleDateString("en-gb", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
+          </section>
+        )}
+        <h1>{decode(title)}</h1>
+        <p className="description">{decode(content)}</p>
       </article>
     </Link>
   );

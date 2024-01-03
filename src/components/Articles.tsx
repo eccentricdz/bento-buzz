@@ -4,10 +4,13 @@ import { Article } from "./Article";
 import "./Articles.css";
 
 export const Articles: FC<{
-  id: number;
-}> = ({ id }) => {
+  col: number;
+  colCount: number;
+}> = ({ col, colCount }) => {
   const { data: articles = [], isError, isLoading } = useArticles();
-  const filteredArticles = articles.filter((_, index) => index % 3 === id);
+  const filteredArticles = articles.filter(
+    (_, index) => index % colCount === col
+  );
 
   return (
     <section className="articles">
