@@ -12,7 +12,12 @@ function App() {
     <div className="bento-buzz">
       <header>
         <Link>
-          <img src={logo} alt="logo" className="logo" />
+          <img
+            src={logo}
+            alt="logo"
+            className="logo"
+            style={{ height: Math.max(48, columns * 24) }}
+          />
         </Link>
         <nav className="header-links">
           <Link
