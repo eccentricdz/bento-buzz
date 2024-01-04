@@ -15,10 +15,6 @@
   flex: 0 0 72px;
 }
 
-.logo {
-  height: 72px;
-}
-
 .header-links {
   display: flex;
   gap: 64px;
