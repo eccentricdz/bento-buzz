@@ -3,7 +3,7 @@ import { decode } from "he";
 describe('Bento Buzz', () => {
     beforeEach(() => {
         cy.fixture('articles.json').as('articles').then((articles) => {
-            cy.intercept('GET', 'https://bento-buzz.onrender.com', articles).as('getArticles');
+            cy.intercept('GET', 'http://bento-buzz.us-east-2.elasticbeanstalk.com/', articles).as('getArticles');
         });
         cy.visit('http://localhost:3000/');
     });
