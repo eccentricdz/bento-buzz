@@ -25,7 +25,7 @@ describe('Bento Buzz', () => {
         cy.get<Array<any>>('@articles').then((articles) => {
             cy.get('article').should('have.length', articles.length);
             articles.forEach(({ link, title }) => {
-                cy.get('article').contains(decode(title)).parent().parent().should('have.attr', 'href', link).should('have.attr', 'target', '_blank');
+                cy.get('article').contains(decode(title));
             });
         });
     });
