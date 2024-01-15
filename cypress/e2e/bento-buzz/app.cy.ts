@@ -1,9 +1,10 @@
 import { decode } from "he";
+import { BENTO_BUZZ_API_URL } from "../../../src/data/useArticles";
 
 describe('Bento Buzz', () => {
     beforeEach(() => {
         cy.fixture('articles.json').as('articles').then((articles) => {
-            cy.intercept('GET', 'http://bento-buzz.us-east-2.elasticbeanstalk.com/', articles).as('getArticles');
+            cy.intercept('GET', BENTO_BUZZ_API_URL, articles).as('getArticles');
         });
         cy.visit('http://localhost:3000/');
     });
