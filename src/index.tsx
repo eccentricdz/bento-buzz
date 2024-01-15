@@ -4,8 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import mixpanel from "mixpanel-browser";
 
 const queryClient = new QueryClient();
+
+// TODO: Move the token to an environment variable.
+mixpanel.init("1bf77a736f8eda486012d28ecf258154", {
+  debug: true,
+  track_pageview: true,
+  persistence: "localStorage",
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

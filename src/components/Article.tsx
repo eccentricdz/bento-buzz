@@ -3,6 +3,7 @@ import "./Article.css";
 import { Link } from "./Link";
 import { decode } from "he";
 import React from "react";
+import mixpanel from "mixpanel-browser";
 
 export type BentoBuzzArticle = {
   title: string;
@@ -21,7 +22,13 @@ export const Article: FC<BentoBuzzArticle> = ({
   source,
 }) => {
   return (
-    <Link href={link} target="_blank">
+    <Link
+      target="_blank"
+      onClick={() => {
+        mixpanel.track("Article Clicked", { title, link });
+        window.open(link, "_blank");
+      }}
+    >
       <article>
         {source && pubDate && (
           <section className="metadata">
