@@ -8,6 +8,13 @@
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 768px) {
+  .bento-buzz {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
 .bento-buzz header {
   display: flex;
   justify-content: space-between;

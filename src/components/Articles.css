@@ -4,3 +4,9 @@
     flex: 1;
     gap: 32px
 }
+
+@media screen and (max-width: 768px) {
+    .articles {
+        gap: 16px
+    }
+}
