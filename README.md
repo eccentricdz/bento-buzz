@@ -1,13 +1,17 @@
-# Bento Buzz
+Bento Buzz employs AI to analyze the most impactful 1000 news stories daily, rating them on a significance scale from 0 to 10. Only articles with a rating exceeding 7 are curated for presentation. The assessment of significance is based on seven crucial factors:
 
-Bento Buzz employs advanced AI technology, specifically ChatGPT-4, to meticulously analyze the top 1000 news articles each day. These news pieces are systematically ranked on a significance scale ranging from 0 to 10, gauged through the evaluation of seven key factors:
+1. Scope: The number of individuals affected by the event.
 
-1. **Scale**: The extent to which the event impacts people.
-2. **Magnitude**: The size or significance of the effect.
-3. **Potential**: The likelihood that the event may trigger larger consequences.
-4. **Novelty**: The degree of unexpectedness or uniqueness associated with the event.
-5. **Immediacy**: The temporal proximity of the event.
-6. **Actionability**: The probability that readers can act upon the news for personal benefit.
-7. **Credibility**: The level of trustworthiness and reliability attributed to the news source.
+2. Intensity: The magnitude of the event's impact.
 
-This intricate analysis ensures a nuanced and comprehensive understanding of the news landscape, allowing Bento Buzz to deliver information that is not only relevant but also reliable and actionable for its users.
+3. Originality: The unexpected or distinctive nature of the event.
+
+4. Immediacy: The temporal proximity of the event.
+
+5. Practicability: The likelihood that readers can take actionable steps for personal benefit in response to the news.
+
+6. Positivity: An evaluation of the event's positive aspects, counteracting media negativity bias.
+
+7. Credibility: An assessment of the source's reliability.
+
+Bento Buzz utilizes these multidimensional criteria to sift through the news landscape, offering a refined selection that ensures both substance and relevance for the informed reader.
