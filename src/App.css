@@ -18,21 +18,6 @@
 .header-links {
   display: flex;
   gap: 64px;
-
-  a:hover,
-  a.active {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: var(--subtle-gold-color);
-    }
-  }
 }
 
 main {
@@ -57,4 +42,25 @@ footer {
   .bento-buzz header {
     flex: 0 0 48px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .header-links {
+
+    a:hover,
+    a.active {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--subtle-gold-color);
+      }
+    }
+  }
+
 }
