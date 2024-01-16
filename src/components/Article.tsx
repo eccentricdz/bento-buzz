@@ -23,7 +23,6 @@ export const Article: FC<BentoBuzzArticle> = ({
 }) => {
   return (
     <Link
-      target="_blank"
       onClick={() => {
         mixpanel.track("Article Clicked", { title, link });
         window.open(link, "_blank");

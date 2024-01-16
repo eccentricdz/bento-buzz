@@ -15,6 +15,20 @@ article {
         font-family: 'PPEditorial';
         font-size: 1.5em;
     }
+
+    mark {
+        color: var(--subtle-gold-color);
+        background: none;
+
+        &::selection {
+            background-color: var(--subtle-gold-color);
+            color: var(--floor-color);
+        }
+
+        &.red {
+            color: var(--bento-buzz-red-color);
+        }
+    }
 }
 
 .source {

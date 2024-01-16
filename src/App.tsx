@@ -4,9 +4,11 @@ import "./App.css";
 import { Link } from "./components/Link";
 import { Articles } from "./components/Articles";
 import { useResponsiveColumns } from "./hooks/useResponsiveColumns";
+import { About } from "./components/About";
 
 function App() {
   const columns = useResponsiveColumns();
+  const [showAbout, setShowAbout] = React.useState(false);
 
   return (
     <div className="bento-buzz">
@@ -20,24 +22,19 @@ function App() {
           />
         </Link>
         <nav className="header-links">
-          <Link
-            href="https://github.com/eccentricdz/bento-buzz"
-            target="_blank"
-          >
-            {"Github"}
-          </Link>
-          {/* <Link
-            onClick={() => setShowAbout((show) => !show)}
-            style={{ cursor: "pointer" }}
-          >
+          <Link onClick={() => setShowAbout((show) => !show)}>
             {showAbout ? "Articles" : "About"}
-          </Link> */}
+          </Link>
         </nav>
       </header>
       <main>
-        {Array.from(Array(columns).keys()).map((col) => (
-          <Articles col={col} colCount={columns} />
-        ))}
+        {showAbout ? (
+          <About />
+        ) : (
+          Array.from(Array(columns).keys()).map((col) => (
+            <Articles col={col} colCount={columns} />
+          ))
+        )}
       </main>
       <footer></footer>
     </div>

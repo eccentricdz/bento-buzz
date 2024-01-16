@@ -56,10 +56,5 @@ footer {
 
   .bento-buzz header {
     flex: 0 0 48px;
-
-  }
-
-  .header-links {
-    gap: 32px;
   }
 }

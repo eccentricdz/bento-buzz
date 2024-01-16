@@ -9,10 +9,6 @@ describe('Bento Buzz', () => {
         cy.visit('http://localhost:3000/');
     });
 
-    it('should navigate user to the github page', () => {
-        cy.get('a[href="https://github.com/eccentricdz/bento-buzz"]').contains('Github').should('have.attr', 'target', '_blank');
-    });
-
     it('should intercept request for articles', () => {
         cy.wait('@getArticles').then((interception) => {
             cy.get('@articles').then((articles) => {
@@ -25,7 +21,7 @@ describe('Bento Buzz', () => {
     it('should display articles', () => {
         cy.get<Array<any>>('@articles').then((articles) => {
             cy.get('article').should('have.length', articles.length);
-            articles.forEach(({ link, title }) => {
+            articles.forEach(({ title }) => {
                 cy.get('article').contains(decode(title));
             });
         });
