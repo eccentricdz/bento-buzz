@@ -23,7 +23,7 @@ body {
 
 @font-face {
   font-family: 'PPEditorial';
-  src: url('./fonts/PPEditorialNew-Regular.otf') format('opentype');
+  src: url('../public/fonts/PPEditorialNew-Regular.otf') format('opentype');
 }
 
 code {
