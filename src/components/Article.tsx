@@ -5,12 +5,36 @@ import { decode } from "he";
 import React from "react";
 import mixpanel from "mixpanel-browser";
 
+/**
+ * Article properties.
+ */
 export type BentoBuzzArticle = {
+  /**
+   * The title of the article.
+   */
   title: string;
+  /**
+   * The content of the article.
+   */
   content: string;
+
+  /**
+   * The link to the article.
+   */
   link: string;
+
+  /**
+   * The publication date of the article.
+   */
   pubDate: string;
+  /**
+   * The source of the article.
+   */
   score: number;
+  /**
+   * The source of the article.
+   * @example "BBC"
+   */
   source?: string;
 };
 
